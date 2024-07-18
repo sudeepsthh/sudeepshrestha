@@ -1,8 +1,345 @@
-<!--
-// v0 by Vercel.
-// https://v0.dev/t/QHSCzQaJ6DP
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
+        .bg-background {
+            background-color: #fff;
+        }
+
+        .text-foreground {
+            color: #333;
+        }
+
+        .dark\:bg-muted {
+            background-color: #222;
+        }
+
+        .dark\:text-card-foreground {
+            color: #ddd;
+        }
+
+        .sticky {
+            position: sticky;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .z-50 {
+            z-index: 50;
+        }
+
+        .border-b {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .h-16 {
+            height: 4rem;
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .md\:px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+            margin-left: 1rem;
+        }
+
+        .md\:flex {
+            display: flex;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        .hover\:underline:hover {
+            text-decoration: underline;
+        }
+
+        .underline-offset-4 {
+            text-underline-offset: 4px;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .md\:hidden {
+            display: none;
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem;
+        }
+
+        .h-10 {
+            height: 2.5rem;
+        }
+
+        .w-10 {
+            width: 2.5rem;
+        }
+
+        .w-6 {
+            width: 1.5rem;
+        }
+
+        .h-6 {
+            height: 1.5rem;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .py-12 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .md\:py-20 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .gap-8 {
+            gap: 2rem;
+        }
+
+        .sm\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .prose {
+            max-width: 65ch;
+        }
+
+        .dark\:text-card-foreground {
+            color: #ddd;
+        }
+
+        .bg-muted {
+            background-color: #f4f4f9;
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .p-4 {
+            padding: 1rem;
+        }
+
+        .bg-muted {
+            background-color: #f4f4f9;
+        }
+
+        .dark\:bg-card {
+            background-color: #333;
+        }
+
+        .dark\:text-card-foreground {
+            color: #ddd;
+        }
+
+        .text-muted-foreground {
+            color: #888;
+        }
+
+        .dark\:text-card-foreground/80 {
+            color: rgba(221, 221, 221, 0.8);
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark\:shadow-none {
+            box-shadow: none;
+        }
+
+        .dark\:bg-primary-foreground {
+            background-color: #555;
+        }
+
+        .dark\:text-primary {
+            color: #ddd;
+        }
+
+        .text-primary-foreground {
+            color: #fff;
+        }
+
+        .bg-primary {
+            background-color: #333;
+        }
+
+        .hover\:bg-accent:hover {
+            background-color: #666;
+        }
+
+        .hover\:text-accent-foreground:hover {
+            color: #fff;
+        }
+
+        .max-w-7xl {
+            max-width: 80rem;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .max-w-md {
+            max-width: 28rem;
+        }
+
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .left-2 {
+            left: 0.5rem;
+        }
+
+        .pl-8 {
+            padding-left: 2rem;
+        }
+
+        .pr-12 {
+            padding-right: 3rem;
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem;
+        }
+
+        .disabled\:cursor-not-allowed:disabled {
+            cursor: not-allowed;
+        }
+
+        .disabled\:opacity-50:disabled {
+            opacity: 0.5;
+        }
+
+        .bg-primary {
+            background-color: #333;
+        }
+
+        .text-primary-foreground {
+            color: #fff;
+        }
+
+        .hover\:bg-primary\/90:hover {
+            background-color: rgba(51, 51, 51, 0.9);
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .dark\:bg-background {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
 <div class="bg-background text-foreground animate-fade-in dark:bg-muted dark:text-card-foreground">
   <header class="sticky top-0 z-50 bg-background border-b animate-fade-in dark:bg-muted">
     <div class="container flex items-center justify-between h-16 px-4 mx-auto md:px-6">
@@ -469,4 +806,6 @@
       </div>
     </div>
   </footer>
-  </div>
+                      </div>
+</body>
+  </html>
